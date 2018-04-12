@@ -24,7 +24,7 @@ spring:
   datasource:
     username: root
     password: 6868939597
-    url: jdbc:mysql://localhost:3306/jdbc
+    url: jdbc:mysql://localhost:3306/springboot
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -45,7 +45,12 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 
-
+mybatis:
+  # 指定全局配置文件位置
+  config-location: classpath:mybatis/mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml
     #建表
-    #schema:
-      #- classpath:department.sql
+#    schema:
+#      - classpath:sql/department.sql
+#      - classpath:sql/employee.sql

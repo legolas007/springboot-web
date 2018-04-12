@@ -1,5 +1,6 @@
 package com.usher.springbootweb;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.ViewResolver;
 import java.util.Locale;
 //导入Spring的配置文件，让配置文件里面的内容生效
 //@ImportResource(locations = {"classpath:beans.xml"})
-
+@MapperScan(value = "com.usher.springbootweb.mapper")
 @SpringBootApplication
 public class SpringbootWebApplication {
 
