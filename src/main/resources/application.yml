@@ -28,11 +28,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   jpa:
-      hibernate:
-  #     更新或者创建数据表结构
-        ddl-auto: update
-  #    控制台显示SQL
-      show-sql: true
+    hibernate:
+#     更新或者创建数据表结构
+      ddl-auto: update
+#    控制台显示SQL
+    show-sql: true
     initialSize: 5
     minIdle: 5
     maxActive: 20
